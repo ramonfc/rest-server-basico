@@ -3,6 +3,7 @@ const {response, request} = require('express');
 
 const usersGet = (req = request, res = response) => {
 
+    //Ejemplo de url: http://localhost:8080/api/usuarios/?q=hola&nombre=pepe&apiKey=2343
     const {q, nombre='No name', apiKey} = req.query;
 
     res.json({
@@ -25,6 +26,7 @@ const usersPost = (req, res = response) => {
 
 
 const usersPut = (req, res = response) => {
+// Ejemplo de url: http://localhost:8080/api/usuarios/10
 
     /* const id = req.params.id; */
     const {id} = req.params;    
